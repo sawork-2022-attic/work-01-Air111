@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="panel" class="asciiPanel.AsciiPanel">
+        <property name="asciiFont">
+            <ref bean="CP437_9x16"/>
+        </property>
+    </bean>
+
+    <bean id="CP437_9x16" class="asciiPanel.AsciiFont">
+        <constructor-arg type="java.lang.String" value="cp437_9x16.png"/>
+        <constructor-arg type="int" value="9"/>
+        <constructor-arg type="int" value="16"/>
+    </bean>
+
+    <bean id="DRAKE_10x10" class="asciiPanel.AsciiFont">
+        <constructor-arg type="java.lang.String" value="drake_10x10.png"/>
+        <constructor-arg type="int" value="10"/>
+        <constructor-arg type="int" value="10"/>
+    </bean>
+
+    <bean id="CP437_8x8" class="asciiPanel.AsciiFont">
+        <constructor-arg type="java.lang.String" value="cp437_8x8.png"/>
+        <constructor-arg type="int" value="8"/>
+        <constructor-arg type="int" value="8"/>
+    </bean>
+
+</beans>
